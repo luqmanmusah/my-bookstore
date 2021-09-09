@@ -1,28 +1,39 @@
-import React from 'react'
-
+import React, { useState }from 'react'
+import uniqid from 'uniqid'
+import addBook from '../redux/books/books'
 
 let AddBookForm = ({ onSubmit }) => {
-  let input
+  const bookID = uniqid();
+  const [bookTitle, setTitle] = useState(null);
+  const [bookCategory, setCategory] = useState(null);
+
+
+  const updateTitle = (event) => { // the curly brace opens a multiline function
+    setTitle(event.target.value)
+  };
+  const updateAuthor = (event) => { // the curly brace opens a multiline function
+    setCategory(event.target.value)
+  };
+  const submitBook = async () => {
+    
+  };
 
   return (
     <div>
-      <form onSubmit={e => {
-        e.preventDefault()
-        if (!input.value.trim()) {
-          return
-        }
-        onSubmit(input.value)
-        input.value = ''
-      }}>
-        <input ref={node => {
-          input = node
-        }} />
-        <button type="submit">
-          Add Book
-        </button>
+      <h3>Add new book</h3>
+      <form>
+        <label>Title:</label>
+        <br />
+        <input type="text" className="title" name="title" onChange={updateTitle} />
+        <br />
+        <label>Category:</label>
+        <br />
+        <input type="text" className="category" name="category" onChange={updateAuthor} />
+        <br />
+        <input type="submit" value="Submit" onClick={submitBook} />
       </form>
     </div>
-  )
-}
+  );
+};
 
 export default AddBookForm

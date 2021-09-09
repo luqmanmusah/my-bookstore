@@ -4,7 +4,7 @@ import './App.css';
 import ListBooks from './components/listBooks';
 import Nav from './components/Nav';
 import AddBookForm from './components/addBookForm';
-import Categories from './redux/categories/categories'
+import Categories from './components/categories'
 
 function App() {
   return (

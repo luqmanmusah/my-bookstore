@@ -2,24 +2,15 @@ import React from 'react'
 import Book from './book'
 
 const ListBooks = ({ books, onBookClick }) => (
-  <ul>
-    {books.map(todo =>
-      <Book
-        key={todo.id}
-        {...todo}
-        onClick={() => onBookClick(todo.id)}
-      />
-    )}
-  </ul>
+  <div>
+    <h1>
+      List of Books
+    </h1>
+    <h3>
+      Books
+    </h3>
+    <Book />
+  </div>
 )
-
-// ListBooks.propTypes = {
-//   books: PropTypes.arrayOf(PropTypes.shape({
-//     id: PropTypes.number.isRequired,
-//     completed: PropTypes.bool.isRequired,
-//     text: PropTypes.string.isRequired
-//   }).isRequired).isRequired,
-//   onBookClick: PropTypes.func.isRequired
-// }
 
 export default ListBooks
