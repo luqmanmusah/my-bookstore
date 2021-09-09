@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import Book from './book'
 
 const ListBooks = ({ books, onBookClick }) => (
@@ -13,13 +13,13 @@ const ListBooks = ({ books, onBookClick }) => (
   </ul>
 )
 
-ListBooks.propTypes = {
-  books: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    completed: PropTypes.bool.isRequired,
-    text: PropTypes.string.isRequired
-  }).isRequired).isRequired,
-  onBookClick: PropTypes.func.isRequired
-}
+// ListBooks.propTypes = {
+//   books: PropTypes.arrayOf(PropTypes.shape({
+//     id: PropTypes.number.isRequired,
+//     completed: PropTypes.bool.isRequired,
+//     text: PropTypes.string.isRequired
+//   }).isRequired).isRequired,
+//   onBookClick: PropTypes.func.isRequired
+// }
 
 export default ListBooks

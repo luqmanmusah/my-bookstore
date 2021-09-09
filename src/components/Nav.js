@@ -5,12 +5,12 @@ import { NavLink } from 'react-router-dom';
 const Nav = () => {
   const links = [
     {
-      id: 2,
-      path: '/books',
-      text: 'Books',
+      id: 1,
+      path: '/',
+      text: 'Book',
     },
     {
-      id: 3,
+      id: 2,
       path: '/categories',
       text: 'Categories',
     },
@@ -27,4 +27,5 @@ const Nav = () => {
     </nav>
   );
 };
+
 export default Nav
