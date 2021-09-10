@@ -18,11 +18,17 @@ const Nav = () => {
   return (
     <nav>
       <ul>
-        {links.map((link) => (
+        {links.map((link) => {
+          return (
           <li key={link.id}>
-            <NavLink to={link.path} exact>{link.text} </NavLink>
+            <NavLink 
+              to={link.path} exact
+              >
+              {link.text} 
+            </NavLink>
           </li>
-        ))}
+          );
+          })}
       </ul>
     </nav>
   );

@@ -1,5 +1,5 @@
 import React from 'react'
-import Book from './book'
+import AddBookForm from './addBookForm'
 
 const ListBooks = ({ books, onBookClick }) => (
   <div>
@@ -9,7 +9,7 @@ const ListBooks = ({ books, onBookClick }) => (
     <h3>
       Books
     </h3>
-    <Book />
+    <AddBookForm />
   </div>
 )
 

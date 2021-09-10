@@ -3,7 +3,6 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import ListBooks from './components/listBooks';
 import Nav from './components/Nav';
-import AddBookForm from './components/addBookForm';
 import Categories from './components/categories'
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
     <div>
       <Route path="/">
       <ListBooks />
-      <AddBookForm />
       </Route>
       <Route path="/categories">
       <Categories />
