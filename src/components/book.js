@@ -1,14 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const Book = ({ onClick, completed, text }) => (
-  <li
-    onClick={onClick}
-    style={{
-      textDecoration: completed ? 'line-through' : 'none'
-    }}
-  >
+const Book = (text) => (
+  <li>
     {text}
   </li>
-)
+);
 
-export default Book
+export default Book;

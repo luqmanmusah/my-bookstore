@@ -1,7 +1,7 @@
-import React from 'react'
-import AddBookForm from './addBookForm'
+import React from 'react';
+import AddBookForm from './addBookForm';
 
-const ListBooks = ({ books, onBookClick }) => (
+const ListBooks = () => (
   <div>
     <h1>
       List of Books
@@ -11,6 +11,6 @@ const ListBooks = ({ books, onBookClick }) => (
     </h3>
     <AddBookForm />
   </div>
-)
+);
 
-export default ListBooks
+export default ListBooks;

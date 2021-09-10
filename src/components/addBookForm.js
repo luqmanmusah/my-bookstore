@@ -1,19 +1,19 @@
-import React from 'react'
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import React from 'react';
 // import uniqid from 'uniqid'
 
-let AddBookForm = ({ onSubmit }) => {
+const AddBookForm = () => {
   // const bookID = uniqid();
   // const [bookTitle, setTitle] = useState(null);
   // const [bookCategory, setCategory] = useState(null);
 
-
-  const updateTitle = (event) => { // the curly brace opens a multiline function
+  const updateTitle = () => { // the curly brace opens a multiline function
     // setTitle(event.target.value)
   };
-  const updateAuthor = (event) => { // the curly brace opens a multiline function
+  const updateAuthor = () => { // the curly brace opens a multiline function
     // setCategory(event.target.value)
   };
- 
+
   // const newBook = {
   //   id: bookID,
   //   title: bookTitle,
@@ -21,7 +21,7 @@ let AddBookForm = ({ onSubmit }) => {
   // };
 
   const submitBook = () => {
-   
+
   };
 
   return (
@@ -42,4 +42,4 @@ let AddBookForm = ({ onSubmit }) => {
   );
 };
 
-export default AddBookForm
+export default AddBookForm;
