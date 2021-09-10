@@ -1,24 +1,24 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-// import uniqid from 'uniqid'
+import uniqid from 'uniqid'
 
 const AddBookForm = () => {
-  // const bookID = uniqid();
-  // const [bookTitle, setTitle] = useState(null);
-  // const [bookCategory, setCategory] = useState(null);
+  const bookID = uniqid();
+  const [bookTitle, setTitle] = useState(null);
+  const [bookCategory, setCategory] = useState(null);
 
   const updateTitle = () => { // the curly brace opens a multiline function
-    // setTitle(event.target.value)
+    setTitle(event.target.value)
   };
   const updateAuthor = () => { // the curly brace opens a multiline function
-    // setCategory(event.target.value)
+    setCategory(event.target.value)
   };
 
-  // const newBook = {
-  //   id: bookID,
-  //   title: bookTitle,
-  //   category: bookCategory,
-  // };
+  const newBook = {
+    id: bookID,
+    title: bookTitle,
+    category: bookCategory,
+  };
 
   const submitBook = () => {
 
