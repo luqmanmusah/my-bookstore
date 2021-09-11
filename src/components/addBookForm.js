@@ -7,7 +7,8 @@ import { addBook } from '../redux/books/books';
 const AddBookForm = () => {
   const dispatch = useDispatch();
 
-  const submitBook = () => {
+  const submitBook = (e) => {
+    e.preventDefault();
     const form = document.getElementById('form');
     const newBook = {
       id: uuidv4(),
