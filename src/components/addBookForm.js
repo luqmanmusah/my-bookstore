@@ -1,42 +1,42 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-// import uniqid from 'uniqid'
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { addBook } from '../redux/books/books';
 
 const AddBookForm = () => {
-  // const bookID = uniqid();
-  // const [bookTitle, setTitle] = useState(null);
-  // const [bookCategory, setCategory] = useState(null);
+  const dispatch = useDispatch();
 
-  const updateTitle = () => { // the curly brace opens a multiline function
-    // setTitle(event.target.value)
-  };
-  const updateAuthor = () => { // the curly brace opens a multiline function
-    // setCategory(event.target.value)
-  };
-
-  // const newBook = {
-  //   id: bookID,
-  //   title: bookTitle,
-  //   category: bookCategory,
-  // };
-
-  const submitBook = () => {
-
+  const submitBook = (e) => {
+    e.preventDefault();
+    const form = document.getElementById('form');
+    const newBook = {
+      id: uuidv4(),
+      categorie: document.getElementsByClassName('category').value,
+      title: document.getElementsByClassName('title')[0].value,
+      author: document.getElementsByClassName('author')[0].value,
+    };
+    dispatch(addBook(newBook));
+    form.reset();
   };
 
   return (
     <div>
       <h3>Add new book</h3>
-      <form>
+      <form id="form">
         <label>Title:</label>
         <br />
-        <input type="text" className="title" name="title" onChange={updateTitle} />
+        <input type="text" className="title" name="title" />
+        <br />
+        <label>Author:</label>
+        <br />
+        <input type="text" name="author" className="author" />
         <br />
         <label>Category:</label>
         <br />
-        <input type="text" className="category" name="category" onChange={updateAuthor} />
+        <input type="text" name="category" className="category" />
         <br />
-        <input type="submit" value="Submit" onClick={submitBook} />
+        <button type="submit" onClick={submitBook}>Add Book</button>
       </form>
     </div>
   );
