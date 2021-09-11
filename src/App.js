@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import ListBooks from './components/listBooks';
 import Nav from './components/Nav';
@@ -7,19 +7,24 @@ import Categories from './components/categories';
 
 function App() {
   return (
-    <>
+    <Router>
       <Nav />
       <Switch>
-        <div>
-          <Route path="/">
+
+        <Route exact path="/">
+          <div>
             <ListBooks />
-          </Route>
-          <Route path="/categories">
+          </div>
+        </Route>
+
+        <Route path="/categories">
+          <div>
             <Categories />
-          </Route>
-        </div>
+          </div>
+        </Route>
+
       </Switch>
-    </>
+    </Router>
 
   );
 }
